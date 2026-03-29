@@ -262,11 +262,13 @@
       .about-values{grid-template-columns:1fr}
     }
     @media(max-width:768px){
-      nav{padding:0 16px;height:60px}
+      nav{padding:0 16px;height:60px;justify-content:space-between}
       .nav-links{display:none}
-      .nav-cta{display:none}
-      .nav-logo img{height:40px}
-      .lang-drop-btn{padding:6px 10px;font-size:12px;min-width:54px}
+      .nav-cta{display:inline-flex!important;margin-right:0;padding:8px 12px;font-size:11px;letter-spacing:1px;white-space:nowrap}
+      .nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+      .nav-logo{flex-shrink:0}
+      .nav-logo img{height:36px}
+      .lang-drop-btn{padding:6px 10px;font-size:12px;min-width:48px}
       section{padding:64px 20px}
       .divider{margin:0 20px}
       #hero{padding:90px 20px 160px}
@@ -364,9 +366,7 @@
         <a href="#kontakt" class="L L-en">Contact</a>
       </li>
     </ul>
-    <a href="#kontakt" class="nav-cta L L-de">Angebot anfragen</a>
-    <a href="#kontakt" class="nav-cta L L-hr">Upit za ponudu</a>
-    <a href="#kontakt" class="nav-cta L L-en">Get a Quote</a>
+    <a href="#kontakt" class="nav-cta" id="nav-cta-btn"><span id="nav-cta-txt">Angebot anfragen</span></a>
     <div class="nav-right">
       <div class="lang-drop" id="lang-drop">
         <button class="lang-drop-btn" onclick="toggleLangDrop()" aria-haspopup="listbox" id="lang-drop-btn">
@@ -794,7 +794,7 @@
   <!-- SEO lokalni tekst -->
   <section style="background:#111;padding:48px;border-top:1px solid rgba(201,169,110,.08)">
     <div style="max-width:900px;font-size:13px;font-weight:300;line-height:1.9;color:rgba(242,237,230,.3);font-family:'Barlow',sans-serif">
-      <p><strong style="color:rgba(242,237,230,.45);font-weight:400">Orsulic Putz</strong> – Ihr professioneller <strong style="color:rgba(242,237,230,.45);font-weight:400">Verputzer in Amstetten</strong> und Umgebung. Wir bieten <strong style="color:rgba(242,237,230,.45);font-weight:400">Spachtelarbeiten in Amstetten</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Maschinenputz</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Handputz</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Malerarbeiten</strong> und <strong style="color:rgba(242,237,230,.45);font-weight:400">Fassadenarbeiten</strong> in ganz Niederösterreich. Unser Einsatzgebiet umfasst <strong style="color:rgba(242,237,230,.45);font-weight:400">Amstetten, Sonntagberg, Steyr, Linz, Wels, St. Pölten, Ybbs an der Donau</strong> und <strong style="color:rgba(242,237,230,.45);font-weight:400">Waidhofen an der Ybbs</strong>. Als erfahrener <strong style="color:rgba(242,237,230,.45);font-weight:400">Verputzer Niederösterreich</strong> stehen wir für höchste Qualität, pünktliche Ausführung und faire Preise. Für <strong style="color:rgba(242,237,230,.45);font-weight:400">Spachtelarbeiten Steyr</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Verputzer Linz</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Fassadenarbeiten Wels</strong> und <strong style="color:rgba(242,237,230,.45);font-weight:400">Malerarbeiten St. Pölten</strong> – wir sind Ihr Ansprechpartner. Kontakt: <a href="tel:+436767211968" style="color:rgba(242,237,230,.45)">+43 676 721 1968</a> · <a href="mailto:orsulicputz@gmail.com" style="color:rgba(242,237,230,.45)">orsulicputz@gmail.com</a>.</p>
+      <p><strong style="color:rgba(242,237,230,.45);font-weight:400">Orsulic Putz</strong> – Ihr professioneller <strong style="color:rgba(242,237,230,.45);font-weight:400">Verputzer in Amstetten</strong> und Umgebung. Wir bieten <strong style="color:rgba(242,237,230,.45);font-weight:400">Spachtelarbeiten in Amstetten</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Maschinenputz</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Handputz</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Malerarbeiten</strong> und <strong style="color:rgba(242,237,230,.45);font-weight:400">Fassadenarbeiten</strong> in ganz Niederösterreich. Unser Einsatzgebiet umfasst <strong style="color:rgba(242,237,230,.45);font-weight:400">Amstetten, Sonntagberg, Steyr, Linz, Wels, St. Pölten, Ybbs an der Donau</strong> und <strong style="color:rgba(242,237,230,.45);font-weight:400">Waidhofen an der Ybbs</strong>. Als erfahrener <strong style="color:rgba(242,237,230,.45);font-weight:400">Verputzer Niederösterreich</strong> stehen wir für höchste Qualität, pünktliche Ausführung und faire Preise. Für <strong style="color:rgba(242,237,230,.45);font-weight:400">Spachtelarbeiten Steyr</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Verputzer Linz</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">Fassadenarbeiten Wels</strong> und <strong style="color:rgba(242,237,230,.45);font-weight:400">Malerarbeiten St. Pölten</strong> – wir sind Ihr Ansprechpartner. Kontakt: <a href="tel:+436767211968" style="color:rgba(242,237,230,.45)">+43 676 721 1968</a> · <a href="/cdn-cgi/l/email-protection#f6998485839a9f958683828cb6919b979f9ad895999b" style="color:rgba(242,237,230,.45)"><span class="__cf_email__" data-cfemail="355a474640595c564540414f755258545c591b565a58">[email&#160;protected]</span></a>.</p>
       <p style="margin-top:10px">Orsulic Putz nudi i usluge u Hrvatskoj: <strong style="color:rgba(242,237,230,.45);font-weight:400">gletanje zidova Zagreb</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">špaliranje Zagreb</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">fasadni radovi Zagreb</strong>, <strong style="color:rgba(242,237,230,.45);font-weight:400">strojno žbukanje Zagreb</strong> i <strong style="color:rgba(242,237,230,.45);font-weight:400">soboslikarski radovi Zagreb</strong>. Javite nam se za besplatnu procjenu: <a href="tel:+436767211968" style="color:rgba(242,237,230,.45)">+43 676 721 1968</a>.</p>
     </div>
   </section>
@@ -815,12 +815,15 @@
     </ul>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const CTA_LABELS = {de:'Angebot anfragen', hr:'Upit za ponudu', en:'Get a Quote'};
     const LANG_LABELS = {de:'AT', hr:'HR', en:'EN'};
     function setLang(l) {
       document.body.className = l;
       document.documentElement.lang = l==='de' ? 'de' : l==='hr' ? 'hr' : 'en';
       document.getElementById('lang-current').textContent = LANG_LABELS[l];
+      const ctaTxt = document.getElementById('nav-cta-txt');
+      if(ctaTxt) ctaTxt.textContent = CTA_LABELS[l];
       ['de','hr','en'].forEach(lang => {
         const item = document.getElementById('item-'+lang);
         if(item) item.classList.toggle('active', lang===l);
